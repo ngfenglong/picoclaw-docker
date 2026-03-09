@@ -1,0 +1,109 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.picoclaw/workspace",
+      "restrict_to_workspace": true,
+      "model_name": "qwen2.5",
+      "max_tokens": 2048,
+      "temperature": 0.7,
+      "max_tool_iterations": 10,
+      "summarize_message_threshold": 10,
+      "summarize_token_percent": 75
+    }
+  },
+  "model_list": [
+    {
+      "model_name": "qwen2.5",
+      "model": "qwen2.5:0.5b",
+      "api_key": "ollama",
+      "api_base": "http://ollama:11434/v1"
+    }
+  ],
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "base_url": "",
+      "proxy": "",
+      "allow_from": [
+        "YOUR_TELEGRAM_USER_ID"
+      ],
+      "reasoning_channel_id": ""
+    }
+  },
+  "tools": {
+    "allow_read_paths": null,
+    "allow_write_paths": null,
+    "web": {
+      "enabled": true,
+      "duckduckgo": {
+        "enabled": true,
+        "max_results": 5
+      },
+      "fetch_limit_bytes": 5242880
+    },
+    "cron": {
+      "enabled": true,
+      "exec_timeout_minutes": 5
+    },
+    "mcp": {
+      "enabled": false,
+      "servers": {}
+    },
+    "exec": {
+      "enabled": true,
+      "enable_deny_patterns": true,
+      "custom_deny_patterns": null,
+      "custom_allow_patterns": null
+    },
+    "skills": {
+      "enabled": true,
+      "registries": {
+        "clawhub": {
+          "enabled": true,
+          "base_url": "https://clawhub.ai",
+          "auth_token": "",
+          "search_path": "",
+          "skills_path": "",
+          "download_path": "",
+          "timeout": 0,
+          "max_zip_size": 0,
+          "max_response_size": 0
+        }
+      },
+      "max_concurrent_searches": 2,
+      "search_cache": {
+        "max_size": 50,
+        "ttl_seconds": 300
+      }
+    },
+    "media_cleanup": {
+      "enabled": true,
+      "max_age_minutes": 30,
+      "interval_minutes": 5
+    },
+    "append_file":    { "enabled": true },
+    "edit_file":      { "enabled": true },
+    "find_skills":    { "enabled": true },
+    "install_skill":  { "enabled": true },
+    "list_dir":       { "enabled": true },
+    "message":        { "enabled": true },
+    "read_file":      { "enabled": true },
+    "spawn":          { "enabled": true },
+    "subagent":       { "enabled": true },
+    "web_fetch":      { "enabled": true },
+    "write_file":     { "enabled": true }
+  },
+  "heartbeat": {
+    "enabled": true,
+    "interval": 30
+  },
+  "devices": {
+    "enabled": false,
+    "monitor_usb": true
+  },
+  "gateway": {
+    "host": "127.0.0.1",
+    "port": 18790
+  }
+}
