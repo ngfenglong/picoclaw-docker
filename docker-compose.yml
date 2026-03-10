@@ -52,6 +52,8 @@ services:
   picoclaw-gateway:
     image: docker.io/sipeed/picoclaw:latest
     container_name: picoclaw-gateway
+    environment:
+      - TZ=Asia/Singapore
     volumes:
       - ./config/config.json:/root/.picoclaw/config.json:ro
       - ./workspace:/root/.picoclaw/workspace
