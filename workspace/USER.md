@@ -1,7 +1,6 @@
 # About the User
 
-- Name: (fill in your name)
-- Timezone: (fill in your timezone, e.g. Asia/Singapore)
+- Timezone: Asia/Singapore (UTC+8)
 - Language preference: English
 - Preferred response style: brief and direct
 
